@@ -39,4 +39,21 @@ img{
     margin-top: 150px;
     object-fit: cover;
 }
+
+@media (max-width: 7000px) {
+    .header{
+        margin-top: 40px;
+    }
+    .title{
+        top: 8%;
+    }
+    .title1{
+        top: 10%;
+    }
+
+    img{
+        margin-top: 120px;
+        height: 50vh;
+    }
+}
 </style>

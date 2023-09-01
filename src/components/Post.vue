@@ -88,4 +88,10 @@ img {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+@media (max-width: 700px) {
+    .post{
+        width: 100%;
+    }
+}
 </style>

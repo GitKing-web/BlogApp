@@ -19,4 +19,10 @@ import SideBar from '../components/SideBar.vue';
 .body{
     display: flex;
 }
+
+@media (max-width: 700px) {
+    .body{
+        flex-direction: column;
+    }
+}
 </style>

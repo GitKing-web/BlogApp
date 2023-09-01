@@ -76,4 +76,18 @@
     color: #666;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .nav-left{
+        display: none;
+    }
+    .navs{
+        margin: 4px;
+        padding: 2px;
+        margin-left: 10px;
+    }
+    .navs pre{
+        font-size: 15px;
+    }
+}
 </style>
