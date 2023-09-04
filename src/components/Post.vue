@@ -9,7 +9,9 @@
                 <span class="category">Photography</span>
                 <span class="category">LifeStyle</span>
             </div>
-            <span class="title">Lorem ipsum dolor sit amet</span>
+            <RouterLink to="/post/:id">
+                <span class="title">Lorem ipsum dolor sit amet</span>
+            </RouterLink>
             <hr />
             <span class="time">1 hour ago</span>
         </div>
@@ -48,6 +50,11 @@ img {
     border-radius: 7px;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+    margin-top: 15px;
+}
 .postInfo {
     display: flex;
     flex-direction: column;

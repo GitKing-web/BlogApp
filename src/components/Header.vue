@@ -45,15 +45,15 @@ img{
         margin-top: 40px;
     }
     .title{
-        top: 8%;
+        top: 12%;
     }
     .title1{
-        top: 10%;
+        top: 14%;
     }
 
     img{
         margin-top: 120px;
-        height: 50vh;
+        height: 60vh;
     }
 }
 </style>

@@ -1,20 +1,36 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const showmenu = () => {
+    showmenu = !showmenu
+}
+// function hidemenu(){
+// }
+</script>
 
 <template>
     <div class="navbar">
-        <div class="nav-left">
-            <i class="icon fab fa-facebook-square"></i>
-            <i class="icon fab fa-twitter-square"></i>
-            <i class="icon fab fa-instagram-square"></i>
-            <i class="icon fab fa-pinterest-square"></i> 
-        </div>
-
-        <div class="nav-center">
-            <div class="navs">
-                <pre class="navlist">HOME</pre>
+            <i class=" show menu fas fa-bars"  @click="showmenu()"></i>
+            <div class="nav-left">
+                <i class="icon fab fa-facebook-square"></i>
+                <i class="icon fab fa-twitter-square"></i>
+                <i class="icon fab fa-instagram-square"></i>
+                <i class="icon fab fa-pinterest-square"></i> 
+            </div>
+            
+            <div class="nav-center">
+                <div class="navs">
+            <i class="close menu fas fa-times" @click="hidemenu()"></i>
+                <RouterLink to="/">
+                    <pre class="navlist">HOME</pre>
+                </RouterLink>
+                
                 <pre class="navlist">ABOUT</pre>
                 <pre class="navlist">CONTACT</pre>
-                <pre class="navlist">WRITE</pre>
+                
+                <RouterLink to="/makeapost">
+                    <pre class="navlist">WRITE</pre>
+                </RouterLink>
                 <pre class="navlist">LOGOUT</pre>
             </div>
         </div>
@@ -35,7 +51,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    z-index: 999;
+    z-index: 3;
 }
 .nav-left, .nav-right{
     flex: 3;
@@ -49,6 +65,9 @@
     cursor: pointer;
     color: #444;
 }
+.menu{
+    display: none;
+}
 .nav-center{
     flex: 6;
 }
@@ -57,6 +76,10 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }
 .navlist{
     margin-right: 15px;
@@ -78,16 +101,43 @@
 }
 
 @media (max-width: 700px) {
+    .menu{
+        display: block;
+        margin: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .close{
+        position: absolute;
+        top: 0%;
+        color: #fff;
+        right: 20px;
+    }
     .nav-left{
-        display: none;
+        margin-left: 2rem;
     }
     .navs{
-        margin: 4px;
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        left: -70%;
+        /* text-align: center; */
         padding: 2px;
-        margin-left: 10px;
+        flex-direction: column;
+        width: 70%;
+        height: 100vh;
+        background-color: tomato;
+        z-index: 2;
+    }
+    .navlist{
+        padding: 30px;
+        color: aliceblue;
     }
     .navs pre{
         font-size: 15px;
+    }
+    .search{
+        display: none;
     }
 }
 </style>
