@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue';
-
+import { RouterLink } from 'vue-router';
 const showmenu = () => {
     showmenu = !showmenu
 }
@@ -36,7 +35,9 @@ const showmenu = () => {
         </div>
 
         <div class="nav-right">
-            <img class="profileImg" src="../assets/images/IMG-20230826-WA0002.jpg" alt="">
+            <RouterLink :to="{name: 'profile'}">
+                <img class="profileImg" src="../assets/images/IMG-20230826-WA0002.jpg" alt="">
+            </RouterLink>
             <i class="search fas fa-search"></i>
         </div>
     </div>
